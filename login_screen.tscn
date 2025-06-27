@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://lb2wcav6g0im"]
+
+[ext_resource type="Script" uid="uid://gvtjeni73e2o" path="res://login_screen.gd" id="1_wplbs"]
+[ext_resource type="Texture2D" uid="uid://cjj310f0y6hut" path="res://ดาวน์โหลด (3).png" id="2_3u8nt"]
+[ext_resource type="FontFile" uid="uid://bonsncwx8tyr0" path="res://IBMPlexSansThai-Bold.ttf" id="2_7xvqn"]
+[ext_resource type="FontFile" uid="uid://djwjqidprotm2" path="res://fonts/IBMPlexSansThai-Bold.ttf" id="4_g270c"]
+
+[node name="LoginScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wplbs")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -56.0
+offset_top = -82.0
+offset_right = 785.0
+offset_bottom = 1464.0
+texture = ExtResource("2_3u8nt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 323.0
+offset_right = 466.0
+offset_bottom = 451.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7xvqn")
+text = "sigh in "
+
+[node name="EmailInput" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_g270c")
+
+[node name="LoginButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7xvqn")
+text = "log in"
+flat = true
+
+[node name="ErrorLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2

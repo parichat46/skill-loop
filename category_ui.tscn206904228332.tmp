@@ -1,0 +1,189 @@
+[gd_scene load_steps=10 format=3 uid="uid://bsydga7vm4jle"]
+
+[ext_resource type="Script" uid="uid://brfjhk7f13f1b" path="res://category_ui.gd" id="1_a7wyl"]
+
+[sub_resource type="SystemFont" id="SystemFont_a7wyl"]
+
+[sub_resource type="Theme" id="Theme_v6fa8"]
+default_font = SubResource("SystemFont_a7wyl")
+
+[sub_resource type="Theme" id="Theme_a7wyl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7wyl"]
+bg_color = Color(0.6, 0.6, 0.6, 0.0705882)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6fa8"]
+bg_color = Color(0.968627, 0.6, 0.6, 0.0980392)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pkhw"]
+bg_color = Color(0.984314, 0.6, 0.6, 0.0823529)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cxlk"]
+bg_color = Color(0.996078, 0.6, 0.6, 0.0313726)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnp2y"]
+bg_color = Color(0.976471, 0.6, 0.6, 0.054902)
+
+[node name="CategoryUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 136.0
+offset_top = 1073.0
+offset_right = 176.0
+offset_bottom = 1113.0
+script = ExtResource("1_a7wyl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -682.0
+offset_right = 407.0
+offset_bottom = -539.0
+
+[node name="CategoryButtons" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="WorkButton" type="Button" parent="VBoxContainer/CategoryButtons"]
+layout_mode = 2
+theme = SubResource("Theme_v6fa8")
+text = "ทำงาน"
+
+[node name="ColorIndicator" type="ColorRect" parent="VBoxContainer/CategoryButtons/WorkButton"]
+visible = false
+layout_mode = 0
+offset_left = 334.0
+offset_top = 37.0
+offset_right = 362.0
+offset_bottom = 62.0
+theme = SubResource("Theme_a7wyl")
+
+[node name="HealthButton" type="Button" parent="VBoxContainer/CategoryButtons"]
+layout_mode = 2
+text = "สุขภาพ"
+
+[node name="ColorIndicator" type="ColorRect" parent="VBoxContainer/CategoryButtons/HealthButton"]
+visible = false
+layout_mode = 0
+offset_left = 159.0
+offset_top = 37.0
+offset_right = 189.0
+offset_bottom = 63.0
+
+[node name="HobbyButton" type="Button" parent="VBoxContainer/CategoryButtons"]
+layout_mode = 2
+text = "งานอดิเรก"
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/CategoryButtons/HobbyButton"]
+visible = false
+layout_mode = 0
+offset_left = 228.0
+offset_top = 34.0
+offset_right = 268.0
+offset_bottom = 74.0
+
+[node name="Button" type="Button" parent="VBoxContainer/CategoryButtons"]
+layout_mode = 2
+text = "ความสัมพันธ์"
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/CategoryButtons/Button"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7wyl")
+max_text_lines = 5
+auto_width = true
+
+[node name="ActionContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="EndDayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="KnowledgeLabel" type="Label" parent="Node2D"]
+offset_left = 115.0
+offset_top = -821.0
+offset_right = 188.0
+offset_bottom = -798.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_v6fa8")
+text = "Money"
+
+[node name="MoneyLabel" type="Label" parent="Node2D"]
+offset_left = -36.0
+offset_top = -828.0
+offset_right = 62.0
+offset_bottom = -793.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3pkhw")
+text = "Knowledge"
+
+[node name="EmotionLabel" type="Label" parent="Node2D"]
+offset_left = 122.0
+offset_top = -877.0
+offset_right = 205.0
+offset_bottom = -854.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_4cxlk")
+text = "Emotion"
+
+[node name="BodyLabel" type="Label" parent="Node2D"]
+offset_left = -35.0
+offset_top = -882.0
+offset_right = 38.0
+offset_bottom = -859.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nnp2y")
+text = "Health"
+
+[node name="BalanceScoreLabel" type="Label" parent="Node2D"]
+offset_left = 330.0
+offset_top = -898.0
+offset_right = 370.0
+offset_bottom = -875.0
+text = "1"
+
+[node name="KnowledgePercent" type="Label" parent="Node2D"]
+offset_left = 422.0
+offset_top = -918.0
+offset_right = 462.0
+offset_bottom = -895.0
+text = "11"
+
+[node name="MoneyPercent" type="Label" parent="Node2D"]
+offset_left = 393.0
+offset_top = -885.0
+offset_right = 433.0
+offset_bottom = -862.0
+text = "2"
+
+[node name="HealthPercent" type="Label" parent="Node2D"]
+offset_left = 359.0
+offset_top = -798.0
+offset_right = 399.0
+offset_bottom = -775.0
+text = "3"
+
+[node name="EmotionPercent" type="Label" parent="Node2D"]
+offset_left = 462.0
+offset_top = -819.0
+offset_right = 502.0
+offset_bottom = -796.0
+text = "4"
+
+[node name="FreeTimePercent" type="Label" parent="Node2D"]
+offset_left = 322.0
+offset_top = -851.0
+offset_right = 362.0
+offset_bottom = -828.0
+text = "5"
+
+[connection signal="pressed" from="VBoxContainer/CategoryButtons/WorkButton" to="." method="_on_work_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CategoryButtons/HealthButton" to="." method="_on_health_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CategoryButtons/HobbyButton" to="." method="_on_hobby_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/EndDayButton" to="." method="_on_end_day_button_pressed"]

@@ -1,0 +1,551 @@
+[gd_scene load_steps=39 format=3 uid="uid://bsydga7vm4jle"]
+
+[ext_resource type="Script" uid="uid://brfjhk7f13f1b" path="res://category_ui.gd" id="1_a7wyl"]
+[ext_resource type="Theme" uid="uid://bwqeshbalj5ed" path="res://GameTheme.tres" id="1_v6fa8"]
+[ext_resource type="Texture2D" uid="uid://bs8w4twmyxb1a" path="res://pngwing.com-Photoroom.png" id="3_3pkhw"]
+[ext_resource type="FontFile" uid="uid://bonsncwx8tyr0" path="res://IBMPlexSansThai-Bold.ttf" id="3_4cxlk"]
+[ext_resource type="Texture2D" uid="uid://cfcvuumny1rhv" path="res://6e19d4fe00a0b925d13fdc55a145c7eb.jpg" id="3_nnp2y"]
+
+[sub_resource type="SystemFont" id="SystemFont_a7wyl"]
+
+[sub_resource type="Theme" id="Theme_v6fa8"]
+default_font = SubResource("SystemFont_a7wyl")
+
+[sub_resource type="Theme" id="Theme_a7wyl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7wyl"]
+bg_color = Color(0.6, 0.6, 0.6, 0.0705882)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvj6u"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(0, 160, 66, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54p1a"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(66, 160, 66, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liu2h"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(132, 160, 66, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cxlk"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(0, 240, 75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnp2y"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(75, 240, 75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8d2n"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(150, 240, 75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxhcg"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(225, 240, 75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myrfw"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(300, 240, 75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vxaa"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(375, 240, 75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx3ec"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(450, 240, 75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv4i6"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(525, 240, 75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbly1"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(0, 352, 66, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xaai"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(66, 352, 66, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uslu"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(132, 352, 66, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5v88"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(198, 352, 66, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxre5"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(264, 352, 66, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pkhw"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(0, 0, 46, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myi3p"]
+atlas = ExtResource("3_3pkhw")
+region = Rect2(46, 0, 46, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_myi3p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvj6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54p1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liu2h")
+}],
+"loop": true,
+"name": &"gain_body",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cxlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnp2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8d2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxhcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myrfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vxaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yx3ec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv4i6")
+}],
+"loop": true,
+"name": &"gain_emotion",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbly1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xaai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uslu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5v88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxre5")
+}],
+"loop": true,
+"name": &"gain_knowledge",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pkhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myi3p")
+}],
+"loop": true,
+"name": &"gain_money",
+"speed": 10.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8d2n"]
+bg_color = Color(0.0745098, 0.662745, 0.960784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6fa8"]
+bg_color = Color(0.0768358, 0.0768358, 0.0768358, 1)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxhcg"]
+bg_color = Color(0.872947, 0.837702, 0.183348, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pkhw"]
+bg_color = Color(0.6, 0.6, 0.6, 0.0235294)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myrfw"]
+bg_color = Color(0.978088, 0.537227, 0.83294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cxlk"]
+bg_color = Color(0.996078, 0.6, 0.6, 0.0313726)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vxaa"]
+bg_color = Color(0.570893, 0.790543, 0.445277, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnp2y"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yx3ec"]
+bg_color = Color(0.753017, 0.744825, 0.996339, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lv4i6"]
+bg_color = Color(0.976824, 0.599639, 0.48256, 1)
+
+[node name="CategoryUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 133.0
+offset_top = 1101.0
+offset_right = 133.0
+offset_bottom = 1101.0
+theme = ExtResource("1_v6fa8")
+script = ExtResource("1_a7wyl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = -129.0
+offset_top = -1098.0
+offset_right = 591.0
+offset_bottom = 182.0
+texture = ExtResource("3_nnp2y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = -553.0
+offset_right = 378.0
+offset_bottom = -155.0
+
+[node name="CategoryButtons" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="WorkButton" type="Button" parent="VBoxContainer/CategoryButtons"]
+layout_mode = 2
+theme = SubResource("Theme_v6fa8")
+theme_override_fonts/font = ExtResource("3_4cxlk")
+text = "Work"
+
+[node name="ColorIndicator" type="ColorRect" parent="VBoxContainer/CategoryButtons/WorkButton"]
+visible = false
+layout_mode = 0
+offset_left = 334.0
+offset_top = 37.0
+offset_right = 362.0
+offset_bottom = 62.0
+theme = SubResource("Theme_a7wyl")
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/CategoryButtons/WorkButton"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthButton" type="Button" parent="VBoxContainer/CategoryButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4cxlk")
+text = "Health"
+
+[node name="ColorIndicator" type="ColorRect" parent="VBoxContainer/CategoryButtons/HealthButton"]
+visible = false
+layout_mode = 0
+offset_left = 159.0
+offset_top = 37.0
+offset_right = 189.0
+offset_bottom = 63.0
+
+[node name="HobbyButton" type="Button" parent="VBoxContainer/CategoryButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4cxlk")
+text = "Hobby"
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/CategoryButtons/HobbyButton"]
+visible = false
+layout_mode = 0
+offset_left = 228.0
+offset_top = 34.0
+offset_right = 268.0
+offset_bottom = 74.0
+
+[node name="RelationshipButton" type="Button" parent="VBoxContainer/CategoryButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4cxlk")
+text = "Relationship"
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/CategoryButtons/RelationshipButton"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_4cxlk")
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7wyl")
+max_text_lines = 5
+auto_width = true
+
+[node name="EndDayButton" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_v6fa8")
+text = "สิ่งที่เลือก"
+flat = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="ActionContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DailyMissionButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4cxlk")
+text = "daily mission"
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-110, -1076)
+
+[node name="BalanceScoreLabel" type="Label" parent="Node2D"]
+visible = false
+offset_left = 330.0
+offset_top = -898.0
+offset_right = 370.0
+offset_bottom = -875.0
+text = "1"
+
+[node name="KnowledgePercent" type="Label" parent="Node2D"]
+visible = false
+offset_left = 422.0
+offset_top = -918.0
+offset_right = 462.0
+offset_bottom = -895.0
+text = "11"
+
+[node name="MoneyPercent" type="Label" parent="Node2D"]
+visible = false
+offset_left = 393.0
+offset_top = -885.0
+offset_right = 433.0
+offset_bottom = -862.0
+text = "2"
+
+[node name="HealthPercent" type="Label" parent="Node2D"]
+visible = false
+offset_left = 359.0
+offset_top = -798.0
+offset_right = 399.0
+offset_bottom = -775.0
+text = "3"
+
+[node name="EmotionPercent" type="Label" parent="Node2D"]
+visible = false
+offset_left = 462.0
+offset_top = -819.0
+offset_right = 502.0
+offset_bottom = -796.0
+text = "4"
+
+[node name="FreeTimePercent" type="Label" parent="Node2D"]
+visible = false
+offset_left = 322.0
+offset_top = -851.0
+offset_right = 362.0
+offset_bottom = -828.0
+text = "5"
+
+[node name="CharacterSprite" type="AnimatedSprite2D" parent="Node2D"]
+position = Vector2(186, 364.5)
+scale = Vector2(3.30435, 3.56818)
+sprite_frames = SubResource("SpriteFrames_myi3p")
+animation = &"gain_body"
+
+[node name="KnowledgeStatBar" type="HBoxContainer" parent="Node2D"]
+custom_minimum_size = Vector2(100, 10)
+offset_left = 294.0
+offset_top = 431.0
+offset_right = 602.0
+offset_bottom = 495.0
+
+[node name="KnowledgeBar" type="ProgressBar" parent="Node2D/KnowledgeStatBar"]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_j8d2n")
+max_value = 10.0
+
+[node name="KnowledgeValueLabel" type="Label" parent="Node2D/KnowledgeStatBar"]
+modulate = Color(0.0618156, 0.00288593, 0.0674908, 0.972549)
+self_modulate = Color(1, 0.972549, 1, 0.341176)
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v6fa8")
+text = "Knowledge"
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/KnowledgeStatBar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+stretch_mode = 1
+
+[node name="MoneyStatBar" type="HBoxContainer" parent="Node2D"]
+custom_minimum_size = Vector2(100, 10)
+offset_left = 315.0
+offset_top = 331.0
+offset_right = 623.0
+offset_bottom = 358.0
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/MoneyStatBar"]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+stretch_mode = 3
+
+[node name="MoneyBar" type="ProgressBar" parent="Node2D/MoneyStatBar"]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_sxhcg")
+max_value = 10.0
+
+[node name="MoneyValueLabel" type="Label" parent="Node2D/MoneyStatBar"]
+modulate = Color(0.0117647, 0, 0, 0.956863)
+self_modulate = Color(1, 0.956863, 1, 0.94902)
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3pkhw")
+text = "Money"
+
+[node name="EmotionStatBar" type="HBoxContainer" parent="Node2D"]
+custom_minimum_size = Vector2(100, 10)
+offset_left = 312.0
+offset_top = 388.0
+offset_right = 620.0
+offset_bottom = 428.0
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/EmotionStatBar"]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+stretch_mode = 3
+
+[node name="EmotionBar" type="ProgressBar" parent="Node2D/EmotionStatBar"]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_myrfw")
+max_value = 10.0
+
+[node name="EmotionValueLabel" type="Label" parent="Node2D/EmotionStatBar"]
+modulate = Color(0.0117647, 0, 0, 0.956863)
+self_modulate = Color(1, 0.956863, 1, 0.94902)
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_4cxlk")
+text = "Emotion"
+
+[node name="BodyStatBar" type="HBoxContainer" parent="Node2D"]
+custom_minimum_size = Vector2(100, 10)
+offset_left = 315.0
+offset_top = 267.0
+offset_right = 623.0
+offset_bottom = 307.0
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/BodyStatBar"]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+stretch_mode = 3
+
+[node name="BodyBar" type="ProgressBar" parent="Node2D/BodyStatBar"]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/fill = SubResource("StyleBoxFlat_6vxaa")
+max_value = 10.0
+
+[node name="BodyValueLabel" type="Label" parent="Node2D/BodyStatBar"]
+modulate = Color(0.0117647, 0, 0, 0.313726)
+self_modulate = Color(1, 0.956863, 1, 0.94902)
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_nnp2y")
+text = "Body"
+
+[node name="TimeStatBar" type="HBoxContainer" parent="Node2D"]
+offset_left = 26.0
+offset_top = 123.0
+offset_right = 273.0
+offset_bottom = 186.0
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/TimeStatBar"]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="TimeBar" type="ProgressBar" parent="Node2D/TimeStatBar"]
+custom_minimum_size = Vector2(150, 10)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_yx3ec")
+max_value = 10.0
+
+[node name="TimeValueLabel" type="Label" parent="Node2D/TimeStatBar"]
+layout_mode = 2
+text = "Time"
+
+[node name="EnergyStatBar" type="HBoxContainer" parent="Node2D"]
+offset_left = 272.0
+offset_top = 127.0
+offset_right = 533.0
+offset_bottom = 167.0
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/EnergyStatBar"]
+layout_mode = 2
+stretch_mode = 3
+
+[node name="EnergyBar" type="ProgressBar" parent="Node2D/EnergyStatBar"]
+custom_minimum_size = Vector2(150, 10)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_lv4i6")
+max_value = 10.0
+
+[node name="EnergyValueLabel" type="Label" parent="Node2D/EnergyStatBar"]
+layout_mode = 2
+text = "Energy"
+vertical_alignment = 1
+
+[node name="HttpRequestFirebase" type="HTTPRequest" parent="Node2D"]
+
+[node name="DailyMissionPopup" type="PopupPanel" parent="."]
+size = Vector2i(126, 100)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DailyMissionPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 122.0
+offset_bottom = 96.0
+
+[node name="Label" type="Label" parent="DailyMissionPopup/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4cxlk")
+text = "Daily Misson"
+
+[node name="MissionList" type="VBoxContainer" parent="DailyMissionPopup/VBoxContainer"]
+layout_mode = 2
+
+[node name="CloseMissionButton" type="Button" parent="DailyMissionPopup/VBoxContainer"]
+layout_mode = 2
+text = "ปิด"
+
+[connection signal="pressed" from="VBoxContainer/CategoryButtons/WorkButton" to="." method="_on_work_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CategoryButtons/HealthButton" to="." method="_on_health_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CategoryButtons/HobbyButton" to="." method="_on_hobby_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/EndDayButton" to="." method="_on_end_day_button_pressed"]
+[connection signal="request_completed" from="Node2D/HttpRequestFirebase" to="." method="_on_http_request_firebase_request_completed"]

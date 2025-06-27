@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://80xobdf3uofu"]
+
+[ext_resource type="Script" uid="uid://c7yq088l8ga7s" path="res://popup_panel.gd" id="1_k3w7d"]
+[ext_resource type="FontFile" uid="uid://bonsncwx8tyr0" path="res://IBMPlexSansThai-Bold.ttf" id="2_83gs4"]
+
+[sub_resource type="Animation" id="Animation_k3w7d"]
+resource_name = "appear"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_83gs4"]
+_data = {
+&"appear": SubResource("Animation_k3w7d")
+}
+
+[node name="PopupPanel" type="PopupPanel"]
+size = Vector2i(568, 438)
+visible = true
+script = ExtResource("1_k3w7d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 564.0
+offset_bottom = 434.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(400, 300)
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 564.0
+offset_bottom = 434.0
+color = Color(1, 1, 0.137255, 0.556863)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_83gs4")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 564.0
+offset_bottom = 434.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_83gs4")
+text = ">วิธีการเล่น<
+- ผู้เล่นต้องสมดุลวงจร 4 วงจร ให้มีความสมดุลมากที่สุด
+จากการเลือกแอคชั่นหมวดหมู่ ว่าในวันวันนี้อยากทำแอคชั่นอะไรบ้าง 
+และเมื่อเลือกแอคชั่นแล้วจะมีการแสดงผลลัพธ์ของแอคชั่นนั้นๆ 
+ว่ามีการบวกลบ วงจรใดบ้าง
+
+-ในตัวผลกระทบของแอคชั่นจะมีการใบ้ในเรื่องนี้ เป็นจุดสีๆ 
+ด้วย โดยที่สีแดง คือเป็นการลบ สีเขียว จะเป็นการบวกในวงจรที่ใบ้ 
+ โดยที่
+-จุดสีแดง1จุดหมายถึงการลบวงจรนั้น 1-2 คะแนนน
+-จุดสีแดง2 จุดหมายถึงการลบวงจรนั้น 3-4 คะแนน
+-จุดสีเขียว1 จุดหมายถึงการบวกวงจรนั้น 1-2 คะแนน
+-จุดสีเขียว 2 จุดหมายถึงการบวกวงจรนั้น 3-4 คะแนน"
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_83gs4")
+text = "ไม่ต้องแสดงอีก"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_83gs4")
+text = "เริ่มเล่นเกมเลย"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_close_button_pressed"]
